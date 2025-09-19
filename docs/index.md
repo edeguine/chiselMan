@@ -15,5 +15,5 @@ Sections
 * [Saving / Exporting / Cloud sync](workflow/3_file_management.md): how to manage your files and disk space.
 * [Misc](misc/0_misc.md): miscellaneous features.
 * [Beta features](beta/0_beta.md): get some details on how to use the Experimental features.
-* [Licenses](license/0_license.md): open source licenses.
+* [Licenses](licenses/0_license.md): open source licenses.
 

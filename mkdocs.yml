@@ -9,3 +9,28 @@ markdown_extensions:
   - attr_list
 extra_css:
   - stylesheets/extra.css
+
+nav:
+  - Home: index.md
+  - Workflow:
+      - workflow/0_intro.md
+      - workflow/1_brush_handling.md
+      - workflow/2_dyntopo.md
+      - workflow/3_file_management.md
+      - workflow/4_performance.md
+  - Brushes:
+      - brushes/0_intro.md
+      - brushes/1_properties.md
+      - brushes/2_alt_props.md
+  - Materials:
+      - materials/0_materials.md
+  - Layers:
+      - layers/0_layers.md
+  - Prefs:
+      - prefs/0_prefs.md
+  - Misc:
+      - misc/0_misc.md
+  - Beta:
+      - beta/0_beta.md
+  - Licenses:
+      - licenses/0_license.md
