@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Materials - Chisel Manual</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../stylesheets/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Materials";
+        var mkdocs_page_input_path = "materials\\0_materials.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../index.html" class="icon icon-home"> Chisel Manual
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../index.html">Welcome to MkDocs</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../0_welcome.html">Manual</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Beta</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../beta/0_beta.html">Beta</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Brushes</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../brushes/0_intro.html">Brushes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../brushes/1_properties.html">Brush properties</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../brushes/2_alt_props.html">Alt properties</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Layers</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../layers/0_layers.html">Layers</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">License</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../license/0_license.html">Open source licenses</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Materials</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Materials</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#material-dropdown">Material dropdown</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#wireframe">Wireframe</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#vertex-paint-pbr-settings">Vertex Paint / PBR settings</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#paint-bucket">Paint bucket</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#apply-to-all-children">Apply to all children</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Misc</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../misc/0_misc.html">Misc</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Prefs</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../prefs/0_prefs.html">Preferences</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Workflow</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../workflow/0_intro.html">Workflow</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../workflow/1_brush_handling.html">The brush</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../workflow/2_dyntopo.html">Dynamic topology</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../workflow/3_file_management.html">File management</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../workflow/4_performance.html">Performance</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Chisel Manual</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html" class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Materials</li>
+      <li class="breadcrumb-item active">Materials</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="materials">Materials</h1>
+<p>In the Mat tab you can find the material settings. They determine how your mesh looks and how it is shaded. Some materials can also help rendering more FPS for large meshes (&gt;500k triangles).</p>
+<h2 id="material-dropdown">Material dropdown</h2>
+<p>Pick a material from the list. You can use paint vertices in Beta &gt; paint vertices to paint it, or the paint bucket for solid color.</p>
+<p>For Matcap there is a secondary menu to select a specific matcap.</p>
+<h2 id="wireframe">Wireframe</h2>
+<p>Displays the wireframe for a quick topology check. This is resource intensive for large meshes (&gt;500k triangles) and will drop FPS by 2-5 FPS.</p>
+<p>If you used the freeze brush, wireframe will be on, play with the toggle to remove it after you unfreeze all vertices.</p>
+<h2 id="vertex-paint-pbr-settings">Vertex Paint / PBR settings</h2>
+<p>If you use the Vertex paint material, you can set smoothness (make it shiny or not) and metallic (make it sort of reflective or not).</p>
+<h2 id="paint-bucket">Paint bucket</h2>
+<p>If you use the Vertex paint material, use this button to set a color for the whole material. Will overwrite any color (but you can undo).</p>
+<h2 id="apply-to-all-children">Apply to all children</h2>
+<p>If you click this checkbox then select a material, use the paint bucket or set smoothness / metallic, the layer and all its children will receive the update. Useful to generate a consistent look across multiple related layers.</p>
+<h1 id="performance">Performance</h1>
+<p>If you are working on a very large mesh and FPS drop is an issue, you can switch to a less ressource intensive material. Clay, Marble, Matcap are pretty efficient. Vertex Paint is medium efficient. Smooth wireframe or enabling wireframe toggle are the least efficient.</p>
+<h1 id="how-to-use-the-vertex-paint-in-blender">How to use the vertex paint in Blender</h1>
+<p>When you save your sculpture, each layer's color are saved in the FBX file (they are called vertex colors). If you want to see your mesh' s colors in Blender, you can create a simple Principled BSDF and hook Color Attribute to the color socket.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../license/0_license.html" class="btn btn-neutral float-left" title="Open source licenses"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../misc/0_misc.html" class="btn btn-neutral float-right" title="Misc">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../license/0_license.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../misc/0_misc.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

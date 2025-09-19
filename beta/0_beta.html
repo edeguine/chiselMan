@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Beta - Chisel Manual</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../stylesheets/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Beta";
+        var mkdocs_page_input_path = "beta\\0_beta.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../index.html" class="icon icon-home"> Chisel Manual
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../index.html">Welcome to MkDocs</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../0_welcome.html">Manual</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Beta</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Beta</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#decimate-by-50">Decimate by 50%</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#run-self-intersect-check">Run self-intersect check</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#attempt-self-intersect-cleaning">Attempt self-intersect cleaning</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#run-manifold-check">Run manifold check</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#make-manifold">Make manifold</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#clean-inner-facets">Clean inner facets</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#place-bone-apply-skin-move-bone">Place bone, apply skin, move bone</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#show-render-tab">Show render tab</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#do-a-blender-render">Do a Blender render</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Brushes</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../brushes/0_intro.html">Brushes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../brushes/1_properties.html">Brush properties</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../brushes/2_alt_props.html">Alt properties</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Layers</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../layers/0_layers.html">Layers</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">License</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../license/0_license.html">Open source licenses</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Materials</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../materials/0_materials.html">Materials</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Misc</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../misc/0_misc.html">Misc</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Prefs</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../prefs/0_prefs.html">Preferences</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Workflow</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../workflow/0_intro.html">Workflow</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../workflow/1_brush_handling.html">The brush</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../workflow/2_dyntopo.html">Dynamic topology</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../workflow/3_file_management.html">File management</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../workflow/4_performance.html">Performance</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Chisel Manual</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html" class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Beta</li>
+      <li class="breadcrumb-item active">Beta</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="beta">Beta</h1>
+<p>Beta features are still in development but generally work. They will become easier to use as they become mainstream features.</p>
+<h2 id="decimate-by-50">Decimate by 50%</h2>
+<p>Divided triangle count by 2. Algorithm is ok but topology will not be perfect. It is instead recommended to do it manually with the subdivide brush and a low LOD.</p>
+<h2 id="run-self-intersect-check">Run self-intersect check</h2>
+<p>If you are going to do 3D printing you can use this to find all self-intersections in your mesh. Generally 3d printing requires you to remove all self-intersections. They will be displayed in green on the mesh. Use the Smooth tool or the remesh tool to try and remove them. Run the check again, repeat until none are left.</p>
+<p>Note: there are two versions, quick but imprecise, for a first pass. Then you can use the slow but precise one to really get them all and get a perfect score in Blender 3d print toolbox or equivalent.</p>
+<h2 id="attempt-self-intersect-cleaning">Attempt self-intersect cleaning</h2>
+<p>Will do a slow check and automatically fix offending triangles by remeshing them. Results not guaranteed, it can easily fail.</p>
+<h2 id="run-manifold-check">Run manifold check</h2>
+<p>Chisel needs the mesh to be manifold, or in other words watertight. Each vertex is shared by all incident triangles (no duplicate vertices), each edge must have two neighbors, triangles cannot be duplicated. You can use this check on imported files from other apps to make sure they conform. If your mesh fails this check it's probably a bug and you should send it to me for review at contact@makerscape.info.</p>
+<h2 id="make-manifold">Make manifold</h2>
+<p>If your mesh fails the manifold check, you can try and run this to fix it. Results not guaranteed.</p>
+<h2 id="clean-inner-facets">Clean inner facets</h2>
+<p>Sometimes it can happen that your mesh has inner facets (geometry inside larger geometry). This button will do its best to make a mesh that only has outside geometry with no inside geometry. This is an automated fix and best effort, not guaranteed to work.</p>
+<h2 id="place-bone-apply-skin-move-bone">Place bone, apply skin, move bone</h2>
+<p>Will display an additional tab for bone management. Very experimental but useful for moving limbs / fingers etc To use the bone system: - Layers tab &gt; Select the layer you want. - Bones tab &gt; add a bone, move it with the right grip in the right position - Brushes &gt; Freeze , freeze on your mesh the skin for the bone (area of effect) - Beta &gt; apply skin to bone - Beta &gt; move bone, use right grip to very carefully move the bone, the mesh will deform to accomodate the new position - Beta &gt; Place bone, go back to normal mode</p>
+<p>The user interaction for this will be greatly improved, on the roadmap.</p>
+<h2 id="show-render-tab">Show render tab</h2>
+<p>Displays an additional experimental Render tab. This tab lets you generate path traced renders of your sculpt. It can be useful to make sure the lights and shadows work well with your sculpt. Very experimental.</p>
+<h2 id="do-a-blender-render">Do a Blender render</h2>
+<p>For this feature you need a windows PC with Blender. Download the Blender plugin from makerscape.info, create a Blender scene with your FBX and set it up the way you like, make sure the layer names match the FBX layer names. Start the plugin and point to your scene and to your Blender exe, when you request a Blender render from the headset, the plugin will run the render on your computer and return it to the headset. The purpose of this feature is to easily see what the final render will look like and be able to quickly fix geometry to match path tracing shadows and such. Only matching layer names between the scene and the headset will get updated.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../0_welcome.html" class="btn btn-neutral float-left" title="Manual"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../brushes/0_intro.html" class="btn btn-neutral float-right" title="Brushes">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../0_welcome.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../brushes/0_intro.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

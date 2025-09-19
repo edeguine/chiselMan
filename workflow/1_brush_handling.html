@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>The brush - Chisel Manual</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../stylesheets/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "The brush";
+        var mkdocs_page_input_path = "workflow\\1_brush_handling.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../index.html" class="icon icon-home"> Chisel Manual
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../index.html">Welcome to MkDocs</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../0_welcome.html">Manual</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Beta</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../beta/0_beta.html">Beta</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Brushes</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../brushes/0_intro.html">Brushes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../brushes/1_properties.html">Brush properties</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../brushes/2_alt_props.html">Alt properties</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Layers</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../layers/0_layers.html">Layers</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">License</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../license/0_license.html">Open source licenses</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Materials</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../materials/0_materials.html">Materials</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Misc</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../misc/0_misc.html">Misc</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Prefs</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../prefs/0_prefs.html">Preferences</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Workflow</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="0_intro.html">Workflow</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">The brush</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#lock-brush-to-controller-aka-attach-detach">Lock brush to controller aka Attach / Detach</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#use-surface-vertices">Use surface vertices</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#use-hand-movement">Use hand movement</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#other-settings">Other settings</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="2_dyntopo.html">Dynamic topology</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="3_file_management.html">File management</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="4_performance.html">Performance</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Chisel Manual</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html" class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Workflow</li>
+      <li class="breadcrumb-item active">The brush</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="the-brush">The brush</h1>
+<p>The brush is made up of two bubbles, a green one on the outside and a blue one on the inside.</p>
+<p>The green bubble is where the dynamic topology will be applied, everything that happens inside the green will have the right level of detail for your shape. You can set the level of detail (LOD) in the Props (Properties) tab.</p>
+<p>The blue bubbe is a visualization of the shape the brush will make, for some more abstract brushes like smooth it's just a sphere showing the area of effect.</p>
+<p>To stay focused on sculpting, the brush fades a fair amount when it is touching the sculpture, if you need to see it, move it outside of the sculpture and you can observe its shape and size.</p>
+<h2 id="lock-brush-to-controller-aka-attach-detach">Lock brush to controller aka Attach / Detach</h2>
+<p><img alt="Locked" class="imgrow" src="../img/lockon.png" />
+<img alt="Unlocked" class="imgrow" src="../img/lockoff.png" /></p>
+<p>There are two ways to manipulate the brush, attached to controller or detached.</p>
+<p>The setting is Props &gt; lock brush to controller</p>
+<p>The default (at first app startup) is for the brush to be attached to your right controller. This mode is ok for starters. You can press the left index trigger to invert the direction of the brush.</p>
+<p>The other option is detached mode. In detached mode, the brush floats in midair and you can move it by holding the right grip (middle finger) and moving your right controller, it's a bit like a drag and drop system. This allows you to keep your brush further away from yourself. It is useful if you are sculpting on a large mesh and want to see it from a far and don't like always having your sculpt right in your face. It is recommended for more advanced users.</p>
+<p>If you are left-handed there is a left-handed setting in the Preferences tab that will put the brush on the left controller and the menu on the right side.</p>
+<h2 id="use-surface-vertices">Use surface vertices</h2>
+<p><img alt="Brush neutral" class="imgrow" src="../img/brushNeutral.png" />
+<img alt="Surface verts off" class="imgrow" src="../img/usesurfacevertsoff.png" />
+<img alt="Surface verts on" src="../img/usesurfacevertson.png" /></p>
+<p>A common issue when sculpting is having control over which vertices receive the brush action. For instance imagine you have a thin tube and a large brush. When you press sculpt, do you prefer for the whole tube to be moved, or do you prefer for only one side of the tube (the surface) to move. This is a very common scenario and there is a setting for that, the Property &gt; "use surface vertices" setting. When it is off, the whole tube will move, basically any vertex inside the green bubble is affected regardless of orientation. When is on, only the vertices on the closest surface are picked, so that only one side of the tube is affected by the brush. This setting is so commonly turned on / off that it is mapped to the left controller top button (button Y).</p>
+<h2 id="use-hand-movement">Use hand movement</h2>
+<p>By default the brush picks up on the orientation of your controller and sculpts in that direction, so you basically need to find the right angle before pressing sculpt. There is another mode that is also fun that uses the hand movement, in that mode you press sculpt and move your hand in a certain direction and that direction will become the angle of the brush. It is a fun mode for intuitive sculpting but makes it harder to do precise and detailed work. This setting is under the Property tab "use hand movement" and is specific to each brush. It is on by default for the move brush.</p>
+<h2 id="other-settings">Other settings</h2>
+<p>There are some other settings for the brush (like strength and such). See <a href="../brushes/1_properties.html">Brush properties</a></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="0_intro.html" class="btn btn-neutral float-left" title="Workflow"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="2_dyntopo.html" class="btn btn-neutral float-right" title="Dynamic topology">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="0_intro.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="2_dyntopo.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

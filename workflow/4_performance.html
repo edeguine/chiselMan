@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Performance - Chisel Manual</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../stylesheets/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Performance";
+        var mkdocs_page_input_path = "workflow\\4_performance.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../index.html" class="icon icon-home"> Chisel Manual
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../index.html">Welcome to MkDocs</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../0_welcome.html">Manual</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Beta</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../beta/0_beta.html">Beta</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Brushes</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../brushes/0_intro.html">Brushes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../brushes/1_properties.html">Brush properties</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../brushes/2_alt_props.html">Alt properties</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Layers</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../layers/0_layers.html">Layers</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">License</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../license/0_license.html">Open source licenses</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Materials</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../materials/0_materials.html">Materials</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Misc</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../misc/0_misc.html">Misc</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Prefs</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../prefs/0_prefs.html">Preferences</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Workflow</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="0_intro.html">Workflow</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="1_brush_handling.html">The brush</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="2_dyntopo.html">Dynamic topology</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="3_file_management.html">File management</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Performance</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#triangle-count-vertex-count">Triangle count / Vertex count</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#layers-visibility">Layers visibility</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#break-down-your-sculpt-into-layers">Break down your sculpt into layers</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#mesh-size-and-material">Mesh size and material</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#working-with-larger-meshes">Working with larger meshes</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#locality">Locality</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#lod-and-dynamic-topology">LOD and dynamic topology</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#reducing-triangle-count-and-decimate">Reducing triangle count and decimate</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Chisel Manual</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html" class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Workflow</li>
+      <li class="breadcrumb-item active">Performance</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="performance">Performance</h1>
+<p>The app is designed to stay responsive even on larger meshes, but there are ways to make it lag, generally related to having too many triangles or too many layers on screen. There are ways though to tackle on more ambitious projects and work with large meshes.</p>
+<h2 id="triangle-count-vertex-count">Triangle count / Vertex count</h2>
+<p>You can see the triangle count of your current mesh as well as the whole scene (all layers) by setting Prefs &gt; show system UI. The Quest 3 can render up to 800k triangles without too many issues, higher than that the material will influence if there is a frame drop or not.</p>
+<h2 id="layers-visibility">Layers visibility</h2>
+<p>Layers can be hidden or displayed in your scene. A hidden layer does not impact framerate and rendering (but it uses memory - RAM). To boost performance hide the layers you are not currently working on or that you don't need to see right now. Layers &gt; hide (next to the layer's name)</p>
+<h2 id="break-down-your-sculpt-into-layers">Break down your sculpt into layers</h2>
+<p>This should be obvious, but the easiest way to work without compromises it to use multiple layers and selectively show them. One for the hands, on for the head, one for the body and so forth.</p>
+<h2 id="mesh-size-and-material">Mesh size and material</h2>
+<p>If you have a large mesh (let's say &gt;500k triangles), some materials are more expensive than other computation-wise. The cheapest materials are the matcap / clay / marble because they have very basic shading. After that the vertex paint material (PBR shading) is a bit more expensive but still decent. The slowest of all is when you activate wireframe or use the Smooth wireframe material. Computing and displaying the wires (each triangle outline) is very expensive, so use it sparingly to check your topology then turn it off.</p>
+<h2 id="working-with-larger-meshes">Working with larger meshes</h2>
+<h3 id="locality">Locality</h3>
+<p>At the core of its design, the app uses locality, so that only the triangles around the brush are picked up for computation. So if you want to make a high poly mesh (&gt;500k triangles), you will get the best performance by working from large detail to small detail. First figure out the general shape of your sculpt when the poly count is low and block out the main shapes. Then once you start having a lot of triangles, zoom in and work on small areas of the sculpt at a time. If you keep your brush at a decent size compared to triangle density you will be fine. To make it lag, make the brush the size of you whole sculpt and try to sculpt, you will see the struggle.</p>
+<p>Still related to locality, the number of polys visible on screen impacts rendering framerate. If you can, try to position your sculpt so that you only see the necessary surface, everything off screen does not count for rendering.</p>
+<h3 id="lod-and-dynamic-topology">LOD and dynamic topology</h3>
+<p>To boost performance you can activate Experimental &gt; large mesh mode. In this mode the dynamic topology is not applied every frame, instead only a few times per second, this boosts performance.</p>
+<p>To boost more you can reduce the LOD (level of detail) so that your brush generates less triangles.</p>
+<p>Finally, the ultimate performance trick, but a bit inconvenient is to turn off dynamic topology ( Props &gt; dynamic topology &gt; None). In this mode no new triangles are created or deleted and your are just moving the vertices.</p>
+<h3 id="reducing-triangle-count-and-decimate">Reducing triangle count and decimate</h3>
+<p>Finally a last resort is to reduce the triangle count of your mesh. There are two ways to do it: - Use the subdivide brush with a lower LOD and apply it around the mesh, namely on the parts with too many triangles and not too much detail. For instance you might have a mostly flat skin surface (e.g. the neck of your character) and it does not need that many triangles, make the LOD low (e.g 3.5) and the brush a decent size and apply it on the neck surface to reduce poly count. This method is preferred because it interactive and you can fine tune the look and feel of your sculpt when reducing triangle count.</p>
+<ul>
+<li>Use Experimental &gt; Decimate by 50%. This is more automated, it uses an algorithm to find flat surfaces or low detail surfaces and reduce poly count but it can lead to some weird topolgy, use at your own risks.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="3_file_management.html" class="btn btn-neutral float-left" title="File management"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="3_file_management.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
