@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Preferences - Chisel Manual</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../stylesheets/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Preferences";
+        var mkdocs_page_input_path = "prefs\\0_prefs.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../index.html" class="icon icon-home"> Chisel Manual
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../index.html">Welcome to MkDocs</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../0_welcome.html">Manual</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Beta</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../beta/0_beta.html">Beta</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Brushes</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../brushes/0_intro.html">Brushes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../brushes/1_properties.html">Brush properties</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../brushes/2_alt_props.html">Alt properties</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Layers</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../layers/0_layers.html">Layers</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">License</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../license/0_license.html">Open source licenses</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Materials</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../materials/0_materials.html">Materials</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Misc</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../misc/0_misc.html">Misc</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Prefs</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Preferences</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#set-everything-to-simple-mode">Set everything to simple mode</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#environment">Environment</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#add-reference-image">Add reference image</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#autosmooth">Autosmooth</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#stabilize-controller">Stabilize controller</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#show-tooltips">Show tooltips</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#show-controllers">Show controllers</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#left-handed">Left handed</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#use-proportional-movement">Use proportional movement</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#show-brush-ui">Show brush UI</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#show-system-ui">Show system UI</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Workflow</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../workflow/0_intro.html">Workflow</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../workflow/1_brush_handling.html">The brush</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../workflow/2_dyntopo.html">Dynamic topology</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../workflow/3_file_management.html">File management</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../workflow/4_performance.html">Performance</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Chisel Manual</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html" class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Prefs</li>
+      <li class="breadcrumb-item active">Preferences</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="preferences">Preferences</h1>
+<p>The Prefs tab contains some of the usability and configuration settings for the app.</p>
+<h2 id="set-everything-to-simple-mode">Set everything to simple mode</h2>
+<p>Resets the app to the initial tutorial and change all settings to defaults. Does not delete sculptures.</p>
+<h2 id="environment">Environment</h2>
+<p>You can choose between the following environments: - Workshop: the default sculpter's workshop. In the Misc tab you can choose to display a sculpt on the pedestal. Be mindful though, displaying a high poly sculpt is resource intensive. - Mixed reality: passthrough mode, visualize your work inside your living room. - Grid: see a neutral environment with a grid on the floor. - Solid color: see a solide color with no 3d environment. High performance.</p>
+<h2 id="add-reference-image">Add reference image</h2>
+<p>Will create a reference image canvas in the world, you can grab it with your controller grip triggers. You can use the laser pointer on Pick Image to access images in your Download or Documents folders then press load to display them. You can only sculpt when the laser pointer is not on (not pointing at a canvas), so put your canvas on the sides of your field of view.</p>
+<h2 id="autosmooth">Autosmooth</h2>
+<p>By default a small amount of auto smooth is applied to your mesh when sculpting to keep it looking nice with good uniform topology. You can deactivate it, for instance if you want to make a rough terrain texture. In general it is advised to keep it on even a small amount.</p>
+<h2 id="stabilize-controller">Stabilize controller</h2>
+<p>If you hands are a bit shaky, you can enable this, it will create a bit of lag in your movement but your controllers won't shake. You can adjust the intensity of the stabilization.</p>
+<h2 id="show-tooltips">Show tooltips</h2>
+<p>Displays tooltips on your controllers about the use of each button. You probably want this off after the first hour.</p>
+<h2 id="show-controllers">Show controllers</h2>
+<p>Displays your controllers in app. This is useful if you are doing a recording and want to show where your hands are. Feel free to turn it off.</p>
+<h2 id="left-handed">Left handed</h2>
+<p>Turns on left-handed mode. In left-handed mode everything is mirrored, except for the menu and meta button.</p>
+<h2 id="use-proportional-movement">Use proportional movement</h2>
+<p>Turn it on to use angular based movement (so moving far away objects is easier). Turn it off for more precise, but slower, movement.</p>
+<h2 id="show-brush-ui">Show brush UI</h2>
+<p>Displays the green text about general messages from the app. Highly recommended to keep it on.</p>
+<h2 id="show-system-ui">Show system UI</h2>
+<p>Displays the triangle and vertex count in the layer and in the scene. A little bit distracting, turn it on to check then turn it off.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../misc/0_misc.html" class="btn btn-neutral float-left" title="Misc"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../workflow/0_intro.html" class="btn btn-neutral float-right" title="Workflow">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../misc/0_misc.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../workflow/0_intro.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

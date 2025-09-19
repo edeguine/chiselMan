@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Brushes - Chisel Manual</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../stylesheets/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Brushes";
+        var mkdocs_page_input_path = "brushes\\0_intro.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../index.html" class="icon icon-home"> Chisel Manual
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../index.html">Welcome to MkDocs</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../0_welcome.html">Manual</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Beta</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../beta/0_beta.html">Beta</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Brushes</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Brushes</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#styles-of-brushes">Styles of brushes</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#properties-and-alt-tab">Properties and Alt tab</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#displacement-brushes">Displacement brushes</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#round">Round</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#flat">Flat</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#triangle">Triangle</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#move">Move</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#shave">Shave</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#dilate">Dilate</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#expand">Expand</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#pinch">Pinch</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#twist">Twist</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#crease">Crease</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#carve">Carve</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#extrude">Extrude</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#smoothing">Smoothing</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#smooth">Smooth</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#smooth_1">Smooth+</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#smooth-curve">Smooth curve</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#smooth-flatten">Smooth flatten</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#smooth-align">Smooth align</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#movement-based">Movement based</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#move_1">Move</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#pull">Pull</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#flow">Flow</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#booleans">Booleans</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#add">Add</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#subtract">Subtract</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#cut">Cut</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#copy">Copy</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#alt-sub">Alt sub</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#special-brushes">Special brushes</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#subdivide">Subdivide</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#paint">Paint</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#remesh">Remesh</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#deform">Deform</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#freeze-unfreeze">Freeze / Unfreeze</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#show-sym">Show sym</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="1_properties.html">Brush properties</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="2_alt_props.html">Alt properties</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Layers</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../layers/0_layers.html">Layers</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">License</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../license/0_license.html">Open source licenses</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Materials</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../materials/0_materials.html">Materials</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Misc</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../misc/0_misc.html">Misc</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Prefs</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../prefs/0_prefs.html">Preferences</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Workflow</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../workflow/0_intro.html">Workflow</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../workflow/1_brush_handling.html">The brush</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../workflow/2_dyntopo.html">Dynamic topology</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../workflow/3_file_management.html">File management</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../workflow/4_performance.html">Performance</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Chisel Manual</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html" class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Brushes</li>
+      <li class="breadcrumb-item active">Brushes</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="brushes">Brushes</h1>
+<p>Brushes are the core concept used for sculpting. They provide a way to manipulate the mesh.</p>
+<h2 id="styles-of-brushes">Styles of brushes</h2>
+<p>The brushes can be broken up roughly along these categories:</p>
+<ul>
+<li>Displacement: these brushes move the vertices to create shapes.</li>
+<li>Smoothing: these brushes help make the mesh look more regular.</li>
+<li>Movement brushes: these brushes provide some movement based interaction.</li>
+<li>Booleans: these brushes let you add brand new shapes.</li>
+<li>Special brushes: these brushes have one specific function.</li>
+</ul>
+<h2 id="properties-and-alt-tab">Properties and Alt tab</h2>
+<p>Almost all brushes can be customized in the <a href="1_properties.html">Props</a> tab for basic settings like strength, flow and shape. These settings are shared by all brushes.</p>
+<p>In the <a href="1_properties.html">Props</a> tab you will also find the setting related to the <a href="../workflow/1_brush_handling.html">handling</a> of the brush (attached / detached, follow hand movement, etc).</p>
+<p>Some brushes have additional setting specific to them in the <a href="2_alt_props.html">Alt</a> tab, things like boolean base shape, sharpness for Crease or other specialy settings.</p>
+<h2 id="displacement-brushes">Displacement brushes</h2>
+<h3 id="round">Round</h3>
+<p>Makes a simple round elongated bump. Great for organic shapes, sculpting faces.</p>
+<h3 id="flat">Flat</h3>
+<p>Makes a simple flat bump.</p>
+<h3 id="triangle">Triangle</h3>
+<p>Makes a simple triangle bump. Great for sharper details, more angular features.</p>
+<h3 id="move">Move</h3>
+<p>Grab and move the mesh orgagnically. Sharpness can be customized in Alt. Great for bringing some flowy feeling to your sculpts.</p>
+<h3 id="shave">Shave</h3>
+<p>Pushes the mesh against the normal. Useful for refining a shape, "sanding it down". In the Alt settings you can use a slower mode that tries to prevent the mesh from going inside out - not perfect though. (You will see if it happens, it looks glitchy)</p>
+<h3 id="dilate">Dilate</h3>
+<p>Dilates the mesh following the normal. Good for making appendages, nose or cheeks.</p>
+<h3 id="expand">Expand</h3>
+<p>Expand the mesh away from brush center (ignores normal). Similar to Dilate, but uses the brush center and not the mesh. It radiates out.</p>
+<h3 id="pinch">Pinch</h3>
+<p>Contracts the mesh towards brush center (ignores normal). Great for making terrain texture.</p>
+<h3 id="twist">Twist</h3>
+<p>Spins the mesh around the brush center in a spiral. Great for making random / noisy surfaces.</p>
+<h3 id="crease">Crease</h3>
+<p>Make a rim or an indent into the mesh. Sharpness and curve style can be customized in Alt. Point is the default shape, point variant is more frank, point tangent also pulls in the sides of the brush, line is a straight crease line.</p>
+<h3 id="carve">Carve</h3>
+<p>Carves the mesh, pushes the mesh outwards from within the blue shape. Shape can be customized in Alt. Can be slow.</p>
+<h3 id="extrude">Extrude</h3>
+<p>Extrudes the mesh, pushes the mesh inwards into the blue shape. Shape can be customized in Alt. Can be slow.</p>
+<h2 id="smoothing">Smoothing</h2>
+<h3 id="smooth">Smooth</h3>
+<p>Laplacian smoothing, moves the vertices to make the mesh more uniform. Can make the mesh a bit flat.</p>
+<h3 id="smooth_1">Smooth+</h3>
+<p>Moves the vertices to remove sharp angles, makes the mesh softer and rounder.</p>
+<h3 id="smooth-curve">Smooth curve</h3>
+<p>Tries to smooth the mesh while preserving curvature, for instance useful for smoothing a vase or a flower petal.</p>
+<h3 id="smooth-flatten">Smooth flatten</h3>
+<p>Aligns the vertices to make a flat surface. Great for bringing in line glitchy vertices / spikes (e.g. after a boolean subtract, or a shave brush on a sharp edge).</p>
+<h3 id="smooth-align">Smooth align</h3>
+<p>Aligns the vertices, with more control. Alt tab lets you specify which vertices to pick (above / below / both sides).</p>
+<h2 id="movement-based">Movement based</h2>
+<p>These brushes work based on controller movement. They are the most "VR native" brushes of the bunch.</p>
+<h3 id="move_1">Move</h3>
+<p>Grab and move the mesh orgagnically. Sharpness can be customized in Alt. Great for bringing some flowy feeling to your sculpts.</p>
+<h3 id="pull">Pull</h3>
+<p>Put your brush on the surface of the mesh, hold sculpt and move your brush to pull out the mesh to follow your brush. Great for making branches, horns, fingers etc. Don't go too fast or the program won't be able to keep up.</p>
+<h3 id="flow">Flow</h3>
+<p>Hold sculpt and move your hand around to make a tube. Alt lets you customize tube shape and density. Can be used to write "Hello" for instance.</p>
+<h2 id="booleans">Booleans</h2>
+<h3 id="add">Add</h3>
+<p>Adds a shape to your sculpture and merge it with the existing mesh. If you want the shape alone, creat an empty layer first. Alt tab lets you customize shape (preset or your own).</p>
+<h3 id="subtract">Subtract</h3>
+<p>Removes a shape from your sculpture. Alt tab lets you customize shape (preset or your own).</p>
+<h3 id="cut">Cut</h3>
+<p>Cuts a piece from your mesh and lets you add it elsewhere (it becomes your brush).</p>
+<h3 id="copy">Copy</h3>
+<p>Copies a piece of your mesh, without removing it, and lets you add it elsewhere (it becomes your brush).</p>
+<h3 id="alt-sub">Alt sub</h3>
+<p>Cuts a piece of your brush (brush minus mesh) and updates the brush. Use it to quickly cut out parts of your brush when using booleans.</p>
+<h2 id="special-brushes">Special brushes</h2>
+<h3 id="subdivide">Subdivide</h3>
+<p>Applies dynamic topology without moving vertices. Useful for increasing or reducing triangle count.</p>
+<h3 id="paint">Paint</h3>
+<p>Lets your paint your mesh (vertex painting). Material needs to be set to Vertex Paint. If you use it with dynamic topology, the paint will match the size of your brush. If you use it with dynamic topology turned-off, the closest vertices inside your brush will be painted (less detail). You can press the Y button to bring in the color picker. You can press left trigger + Y button to go into "sample color" mode then do a sculpt action to sample the color at the brush location (brush will collect one sample then revert back to painting)</p>
+<h3 id="remesh">Remesh</h3>
+<p>Remesh a part of your mesh, useful to remove snags, glitches and high incidence parts of the mesh. Can be slow on larger meshes. Does not preserve detail too well.</p>
+<h3 id="deform">Deform</h3>
+<p>Lets you deform your mesh with a lattice. Grab the blue control points with your right grip (middle finger) to move them. Move the brush and press the sculpt button to reposition the lattice, you will see new blue control points at the brush location.</p>
+<h3 id="freeze-unfreeze">Freeze / Unfreeze</h3>
+<p>Freeze or unfreeze some vertices to lock them in place. Useful when you want to edit close or touching surfaces. When you are done, unfreeze your vertices.</p>
+<h3 id="show-sym">Show sym</h3>
+<p>Lets you adjust the "origin of symmetry" and its orientation compared to your layer with right grip trigger. After that, switch to another brush and turn on Ox / Oy / Oz symmetry in the props tab to use symmetry. The symmetry will be based on the location of the "origin of symmetry".</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../beta/0_beta.html" class="btn btn-neutral float-left" title="Beta"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="1_properties.html" class="btn btn-neutral float-right" title="Brush properties">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../beta/0_beta.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="1_properties.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

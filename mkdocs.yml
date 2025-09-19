@@ -1,0 +1,11 @@
+site_name: Chisel Manual
+
+use_directory_urls: false
+theme:
+  name: readthedocs
+  
+markdown_extensions:
+  - admonition
+  - attr_list
+extra_css:
+  - stylesheets/extra.css

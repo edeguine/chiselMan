@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Misc - Chisel Manual</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../stylesheets/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Misc";
+        var mkdocs_page_input_path = "misc\\0_misc.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../index.html" class="icon icon-home"> Chisel Manual
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../index.html">Welcome to MkDocs</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../0_welcome.html">Manual</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Beta</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../beta/0_beta.html">Beta</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Brushes</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../brushes/0_intro.html">Brushes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../brushes/1_properties.html">Brush properties</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../brushes/2_alt_props.html">Alt properties</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Layers</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../layers/0_layers.html">Layers</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">License</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../license/0_license.html">Open source licenses</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Materials</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../materials/0_materials.html">Materials</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Misc</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Misc</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#customize-workshop">Customize workshop</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#center-and-resize-sculptures">Center and resize sculptures</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#origin-to-center-of-mass">Origin to center of mass</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#use-tablet-style-movement">Use tablet style movement</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Prefs</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../prefs/0_prefs.html">Preferences</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Workflow</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../workflow/0_intro.html">Workflow</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../workflow/1_brush_handling.html">The brush</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../workflow/2_dyntopo.html">Dynamic topology</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../workflow/3_file_management.html">File management</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../workflow/4_performance.html">Performance</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Chisel Manual</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html" class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Misc</li>
+      <li class="breadcrumb-item active">Misc</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="misc">Misc</h1>
+<p>Some features that don't really fit anywhere else.</p>
+<h2 id="customize-workshop">Customize workshop</h2>
+<p>Lets you customize the pedestal display in the corner of the workshop. Careful don't display a high poly mesh there as it takes resources.</p>
+<p>You can also customize the lights colors and angles.</p>
+<h2 id="center-and-resize-sculptures">Center and resize sculptures</h2>
+<p>If you really lose your sculpture, for instance if it becomes very small due to a controller lag during resizing, press this button to center it at a normal size in front of you.</p>
+<h2 id="origin-to-center-of-mass">Origin to center of mass</h2>
+<p>When sculpting, especially when using booleans, you will notice the pivot point is not always at the physical center of the object. Press this button to recenter the pivot point. It will also naturally happen if you wait 12s without sculpting.</p>
+<h2 id="use-tablet-style-movement">Use tablet style movement</h2>
+<p>As you may have noticed by now, in Chisel the longer you press the sculpt button, the bigger the bump. This is different from sculpting app that use a tablet. In those tablet based apps, sculpting happens only when you move your stylus and are spread uniformly along the movement.</p>
+<p>This setting lets you enable this behavior in Chisel to, so sculpting happens once every time you move your brush.</p>
+<p>This setting is useful for getting some very clean creases.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../materials/0_materials.html" class="btn btn-neutral float-left" title="Materials"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../prefs/0_prefs.html" class="btn btn-neutral float-right" title="Preferences">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../materials/0_materials.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../prefs/0_prefs.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
